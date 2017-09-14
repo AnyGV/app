@@ -1,0 +1,136 @@
+<div class="headerImg">
+	<img ng-src="img/app/{{placeCat}}header.jpg" alt="">
+</div>
+<div class="container-fluid" ng-init="sLoadDetail()">
+	<h2 class="placeTitle fontFrosting">{{placeName}}</h2>
+
+	<p>{{placeHistory}}</p>
+
+	<div class="owl-carousel" id="carouselPlacePhotos"
+		style="margin-bottom: 15px;">
+		<div class="item">
+			<img ng-src="img/app/{{placeCat}}_1.jpg" />
+		</div>
+		<div class="item">
+			<img ng-src="img/app/{{placeCat}}_2.jpg" alt="">
+		</div>
+		<div class="item">
+			<img ng-src="img/app/{{placeCat}}_3.jpg" alt="">
+		</div>
+		<div class="item">
+			<img ng-src="img/app/{{placeCat}}_4.jpg" alt="">
+		</div>
+
+		<!-- <div ng-repeat="b in promosBanners">
+			<a href="javascript:void(0)">
+				<img ng-src="{{b.txtPathImg}}" />
+			</a>
+		</div> -->
+	</div>
+
+	<p class="placeInfo vAlign">
+		<i class="fa fa-map-marker"></i>
+		{{placeAddress}}
+
+		<a href="javascript:void(0)" ng-click="openRouteMapNg()"
+			style="color: #333; margin-left: 15px;">
+			<i class="fa fa-map-signs"></i>
+		</a>
+	</p>
+	<p class="placeInfo vAlign">
+		<i class="fa fa-phone"></i>
+		<a href="tel:{{placePhone}}">{{placePhone}}</a>
+	</p>
+	<p class="placeInfo vAlign">
+		<i class="fa fa-envelope"></i>
+		<a href="mailto:{{placeEmail}}">{{placeEmail}}</a>
+	</p>
+
+	<h3 class="placeSubtitle" id="txtComments">Valoración y opiniones:</h3>
+
+	<div class="stars">
+		<div class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-2">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="col-xs-2">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="col-xs-2">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="col-xs-2">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="col-xs-2">
+				<i class="fa fa-star-half-o"></i>
+			</div>
+			<div class="col-xs-1"></div>
+		</div>
+	</div>
+
+	<p class="rating fontFrosting">{{placeRating}}</p>
+
+	<div class="reviews">
+
+		<div class="row vAlign">
+			<div class="col-xs-4 reviewPhoto">
+				<img src="img/app/prof2.png" alt="" class="w100;">
+			</div>
+			<div class="col-xs-8 reviewText">
+				<p>El ambiente del local estuvo a la altura, siempre recordaré a
+					Cuenca por la calidez con la que nos han atendido en lugares como
+					este</p>
+			</div>
+		</div>
+		<div class="row vAlign">
+			<div class="col-xs-4 reviewPhoto">
+				<img src="img/app/prof3.png" alt="" class="w100;">
+			</div>
+			<div class="col-xs-8 reviewText">
+				<p>Muy cordial la atención, encontramos justo lo que buscabamos,
+					salimos bastante contentos</p>
+			</div>
+		</div>
+		<div class="row vAlign">
+			<div class="col-xs-4 reviewPhoto">
+				<img src="img/app/prof4.png" alt="" class="w100;">
+			</div>
+			<div class="col-xs-8 reviewText">
+				<p>La decoración esta muy bonita, es un lugar que recomiendo
+					totalmente visitar cada que se pase por Cuenca.</p>
+			</div>
+		</div>
+		<div class="row vAlign">
+			<div class="col-xs-4 reviewPhoto">
+				<img src="img/app/prof1.png" alt="" class="w100;">
+			</div>
+			<div class="col-xs-8 reviewText">
+				<p>Nos encanto el lugar, estuvo muy bonita la atención</p>
+			</div>
+		</div>
+	</div>
+
+	<h3 class="placeSubtitle" id="txtShare">Compartelo:</h3>
+
+	<div class="shareButtons">
+		<div class="row">
+			<div class="col-xs-6 fbButton">
+				<div class="">
+					<a href="javascript:void(0)" ng-click="shareOnFb()">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 twButton">
+				<div class="">
+					<a href="javascript:void(0)" ng-click="shareOnTw	()">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

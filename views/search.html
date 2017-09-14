@@ -1,0 +1,24 @@
+<div class="container-fluid" ng-init="sLoadSearch()">
+	<h2 class="placeTitle fontFrosting" id="txtSearchResults">Resultados de búsqueda</h2>
+
+	<div class="" style="text-align:center;     padding: 20px 45px;" ng-if="placesResult.length == 0">
+		<p id="txtNoSearchResults">{{noResultsText}}</p>
+	</div>
+
+	<div  ng-if="placesResult.length != 0">
+
+		<a href="#/detail/{{p.catId}}/{{p.id}}" class="searchResult" ng-repeat="p in placesResult">
+			<div class="row vAlign">
+				<div class="col-xs-3">
+					<img ng-src="img/app/{{p.catId}}_1.jpg" alt="">
+				</div>
+				<div class="col-xs-9">
+					<p class="placeName">{{p.name}}</p>
+					<p class="placeDesc">{{p.shortDesc}}</p>
+				</div>
+			</div>
+			<hr>
+		</a>
+	</div>
+
+</div>
